@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <h1>APPLICATION:CROP CONDITION MONITORING</h1>
+        <meta name="description" content="Figure 4 visualizes a heterogeneous time series.">
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        
+        <!--
+            MADE WITH <3 AND JAVASCRIPT
+        -->
+        <!--First Paragraph -->
+        <h1>Figure 4 visualizes a heterogeneous time series.</h1>
+        <p>
+            The lines shown are phased autocorrelograms, or plots of autocorrelation shifted in time, for (subjective) weekly
+            crop condition estimates, averaged from 1985-1995 for the state of Illinois. Each point represents the correlation between one week’s mean estimate and the mean estimate for a subsequent week. Each line contains the correlation between values for a particular week and all subsequent weeks. The data is heterogeneous because it contains both an
+            autoregressive pattern (the linear increments in autocorrelation for the first ten weeks) and a moving average pattern (the larger, unevenly spaced increments from 0.4 to about 0.95 in the rightmost column). The autoregressive process, which can be represented by a time-delay model, expresses weather “memory” (correlating early and late drought); the moving average process, which can be represented by an exponential trace model, physiological damage from drought. Task decomposition can improve performance hereby isolating the AR and MA components for identification and application of the correct specialized architecture – a time delay neural network (Haykin, 1999; Lang et al., 1990) or simple recurrent network (Principé & Lefebvre,2001), respectively.
+
+        </p>
+        
+        <p>
+            We applied a simple mixture model to reduce variance in ANN-based classifiers. A paired t-test with 10 degrees of freedom (for 11-year cross-validation over the weekly predictions) indicates significance at the level of p < 0.004 for the moderator versus TDNN and at the level of p < 0.0002 for the moderator versus IR. The null hypothesis is rejected at the 95% level of confidence for TDNN outperforming IR (p < 0.09), which is consistent with the hypothesis that an MS-HME network yields a performance boost over either network type alone. This result, however,is based on relatively few samples (in terms of weeks per year) and very coarse spatial granularity (statewide averages).
+        </p>
+            
+            <h1>
+                Figure 3: Mean classification accuracy of specialists vs. moderators for all (52) partitions of 5-attribute modular parity problem.
+                
+            </h1>
+        
+        <!-- Add an Image -->
+        
+        <img src="C:\Users\OrCon\OneDrive\Pictures\Screenshots\2024-01-12.png">
+            
+        <p>Table 3 summarizes the performance of an MS-HME network versus that of other induction algorithms from MLC++ (Kohavi et al., 1996) on the crop condition monitoring problem. This experiment illustrates the usefulness of learning task decomposition over heterogeneous time series. The improved learning results due to application of multiple models (TDNN and IR specialists) and a mixture model (the Gamma network moderator).Reports from the literature on common statistical models for time series (Box et al., 1994; Gershenfeld & Weigend, 1994; Neal, 1996) and experience with the (highly heterogeneous) test bed domains documented here bears out the idea that “fitting the right tool to each job” is critical.</p>
+        
+        <h1>Figure 4: Phased autocorrelogram (plot of autocorrelation shifted over time) for crop condition (average quantized estimates). </h1>
+        
+        <!-- Add an Image -->
+        
+        <img src="C:\Users\OrCon\OneDrive\Pictures\Screenshots\2024-01-12 (1).png"><br>
+         
+        
+        <h1><strong>Application: Loss Ratio Prediction in Automobile Insurance Pricing</strong></h1>
+        
+        
+        <p>Table 4 summarizes the performance of the ID3 decision tree induction algorithm and the state-space search-based feature subset selection (FSS) wrapper in MLC++ (Kohavi et al., 1996) compared to that of a genetic wrapper for feature selection. This system is documented in detail in Hsu, Welge, Redman, and Clutter (2002). We used a version of ALLVAR-2, a data set for decision support in automobile insurance policy pricing. This data set was used for clustering and classification and initially contained 471-attribute record for each of over 300,000 automobile insurance policies, with five bins of loss ratio as a prediction target. Wall clock time for the Jenesis and FSS-ID3 wrappers was comparable. As the table shows, both the Jenesis wrapper and the MLC++ wrapper (using ID3 as the wrapped inducer) produce significant improvements over unwrapped ID3 in classification accuracy and very large reductions in the number of attributes used. The test set accuracy and the number of selected attributes are averaged over five cross validation folds (70 aggregate test cases each).</p>Results for data sets from the Irvine database repository that are known to contain irrelevant attributes are also positive.Table 10 presents more descriptive statistics on the five-way cross-validated performance of ID3, FSS-ID3 (the MLC++ implementation of ID3 with its feature subset selection wrapper), and Jenesis. Severe overfitting is quite evident for ID3, based on the difference between training and test set error (perfect purity is achieved in all five folds) and the larger number of attributes actually used compared to the wrappers. Jenesis and FSS-ID3 perform comparably in terms of test set error, though FSS-ID3 has less difference between training and test set error. and Jenesis is less likely to overprune the attribute subset. Note that FSS-ID3 consistently selects the fewest attributes, but still overfits (Jenesis achieves lower test set error in three of five cross validation cases). The test set errors of Jenesis and FSS-ID3 are not significantly different, so generalization quality is not conclusively distinguishable in this case. We note, however, that excessively shrinking the subset indicates a significant tradeoff regarding generalization quality. The classification model was used to audit an existing rule-based classification system over the same instance space, and to calibrate an underwriting model (to guide pricing decisions for policies) for an experimental market.
+        
+        <h1>
+            Table 3: Performance of a HME-type mixture model compared with compared with that
+                   of other inducers on the crop condition monitoring problem
+        </h1>
+            
+        <title>
+            <th style="text-align: center;">Classification Accuracy for Crop Condition Monitoring</th>
+        </title>
+            <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+           </style>
+            
+            <h2>Classification Accuracy for Crop Condition Monitoring (%)</h2>
+            <table border="1">
+                <thead>
+        <tr>
+            <th>Inducer</th>
+            <th>Training Set</th>
+            <th colspan="4">Cross Validation Set</th>
+        </tr>
+          <tr>
+            <th></th>
+            <th>Min</th>
+            <th>Mean</th>
+            <th>Max</th>
+            <th>StdDev</th>
+              <th>Min</th>
+              <th>Mean</th>
+              <th>Max</th>
+              <th>StdDev</th>
+          </tr>
+                </thead>
+                <tbody>
+        <tr>
+            <td>ID3</td>
+            <td>100.0</td>
+            <td>100.0</td>
+            <td>100.0</td>
+            <td>0.00</td>
+            <td>33.3</td>
+            <td>55.6</td>
+            <td>82.4</td>
+            <td>17.51</td>
+        </tr>
+    
+        <tr>
+            <td>ID3, bagged</td>
+            <td>99.7</td>
+            <td>99.9</td>
+            <td>100.0</td>
+            <td>0.15</td>
+            <td>30.3</td>
+            <td>55.2</td>
+            <td>88.2</td>
+            <td>18.30</td>
+        </tr>
+                
+        <tr>
+            <td>ID3, boosted</td>
+            <td>100.0</td>
+            <td>100.0</td>
+            <td>100.0</td>
+            <td>0.00</td>
+            <td>33.3</td>
+            <td>55.6</td>
+            <td>82.4</td>
+            <td>17.51</td>
+        </tr>
+        <tr>
+            <td>C5.0</td>
+            <td>90.7</td>
+            <td>91.7</td>
+            <td>93.2</td>
+            <td>0.75</td>
+            <td>38.7</td>
+            <td>58.7</td>
+            <td>81.8</td>
+            <td>14.30</td>
+        </tr>
+         
+        <tr>
+                <td>C5.0, boosted</td>
+                <td>98.8</td>
+                <td>99.7</td>
+                <td>100.0</td>
+                <td>0.40</td>
+                <td>38.7</td>
+                <td>60.9</td>
+                <td>79.4</td>
+                <td>13.06</td>
+        </tr>
+        <tr>
+                <td>IBL</td>
+                <td>93.4</td>
+                <td>94.7</td>
+                <td>96.7</td>
+                <td>0.80</td>
+                <td>33.3</td>
+                <td>59.2</td>
+                <td>73.5</td>
+                <td>11.91</td>
+            </tr>
+            <tr>
+                <td>Naïve-Bayes</td>
+                <td>74.0</td>
+                <td>77.4</td>
+                <td>81.8</td>
+                <td>2.16</td>
+                <td>38.7</td>
+                <td>68.4</td>
+                <td>96.7</td>
+                <td>22.85</td>
+            </tr>
+            <tr>
+                <td>DNB, bagged</td>
+                <td>73.4</td>
+                <td>76.8</td>
+                <td>80.9</td>
+                <td>2.35</td>
+                <td>38.7</td>
+                <td>70.8</td>
+                <td>93.9</td>
+                <td>19.63</td>
+            </tr>
+            <tr>
+                <td>DNB, boosted</td>
+                <td>76.7</td>
+                <td>78.7</td>
+                <td>81.5</td>
+                <td>1.83</td>
+                <td>38.7</td>
+                <td>69.7</td>
+                <td>96.7</td>
+                <td>21.92</td>
+            </tr>
+            <tr>
+                <td>PEBLS</td>
+                <td>91.6</td>
+                <td>94.2</td>
+                <td>96.4</td>
+                <td>1.68</td>
+                <td>27.3</td>
+                <td>58.1</td>
+                <td>76.5</td>
+                <td>14.24</td>
+            </tr>
+            <tr>
+                <td>IR Expert</td>
+                <td>91.0</td>
+                <td>93.7</td>
+                <td>97.2</td>
+                <td>1.67</td>
+                <td>41.9</td>
+                <td>72.8</td>
+                <td>94.1</td>
+                <td>20.45</td>
+            </tr>
+            <tr>
+                <td>TDNN Expert</td>
+                <td>91.9</td>
+                <td>96.8</td>
+                <td>99.7</td>
+                <td>2.02</td>
+                <td>48.4</td>
+                <td>74.8</td>
+                <td>93.8</td>
+                <td>14.40</td>
+            </tr>
+            <tr>
+                <td>Pseudo-HME</td>
+                <td>98.2</td>
+                <td>98.9</td>
+                <td>100.0</td>
+                <td>0.54</td>
+                <td>52.9</td>
+                <td>79.0</td>
+                <td>96.9</td>
+                <td>14.99</td>  
+                    </tr>
+                </tbody>
+        
+            </table>
+        <p>
+            We have observed that the aggregation method scales well across lines of business (the indemnity and non-indemnity companies) and states. This was demonstrated using many of our decision tree experiments and visualizations using ALLVAR-2 samples and subsamples by state
+        </p>
+        <h3>ACKNOWLEDGMENTS</h3>
+        <style>
+        h3 {
+            text-align: center;
+        }
+
+        p {
+            /* Add styles for the paragraph if needed */
+        }
+    </style>
+        <p>
+            Support for this research was provided in part by the Army Research Lab under grant ARL-PET-IMT-KSU-07, by the Office of Naval Research under grant N00014-01-1-0519, and by the Naval Research Laboratory under grant N00014-97-C-2061. The author thanks Nathan D. Gettings for helpful discussions on data fusion and time series analysis and an anonymous reviewer for comments on background material. Thanks also to David Clutter, Matt A. Durst, Nathan D. Gettings, James A. Louis, Yuching Ni, Yu Pan, Mike Perry, James W. Plummer, Victoria E. Lease, Tom Redman, Cecil P. Schmidt, and Kris Wuollett for implementations of software components of the system described in this chapter.
+        </p>
+        <h1>Table 4: Results from Jenesis for One Company (5-way cross validation), representative data sets</h1>
+        <title>Cross Validation Results</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            text-align: center;
+            
+        }
+    </style>
+<body>
+
+    <table>
+        <thead>
+            <tr>
+                <th><b>Cross Validation Segment</b></th></tr></thead>
+        
+    <table>
+        <h2>Training Set Accuracy (%)</h2>
+        <thead>
+            <tr>
+                <th></th>
+                <th>0</th>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+                <th>Mean</th>
+                <th>Stdev</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>ID3</td>
+                <td>100.0</td>
+                <td>100.0</td>
+                <td>100.0</td>
+                <td>100.0</td>
+                <td>100.0</td>
+                <td>100.0</td>
+                <td>0.00</td>
+            </tr>
+            <tr>
+                <td>FSS-ID3</td>
+                <td>55.00</td>
+                <td>54.29</td>
+                <td>67.86</td>
+                <td>50.36</td>
+                <td>60.71</td>
+                <td>57.64</td>
+                <td>6.08</td>
+            </tr>
+            <tr>
+                <td>Jenesis</td>
+                <td>65.71</td>
+                <td>67.14</td>
+                <td>71.43</td>
+                <td>71.43</td>
+                <td>55.71</td>
+                <td>66.29</td>
+                <td>5.76</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Test Set Accuracy (%)</h2>
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                <th>0</th>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+                <th>Mean</th>
+                <th>Stdev</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>ID3</td>
+                <td>41.43</td>
+                <td>42.86</td>
+                <td>28.57</td>
+                <td>41.43</td>
+                <td>44.29</td>
+                <td>39.71</td>
+                <td>5.67</td>
+            </tr>
+            <tr>
+                <td>FSS-ID3</td>
+                <td>48.57</td>
+                <td>35.71</td>
+                <td>34.29</td>
+                <td>47.14</td>
+                <td>54.29</td>
+                <td>44.00</td>
+                <td>7.74</td>
+            </tr>
+            <tr>
+                <td>Jenesis</td>
+                <td>41.43</td>
+                <td>42.86</td>
+                <td>31.43</td>
+                <td>52.86</td>
+                <td>55.71</td>
+                <td>44.86</td>
+                <td>8.69</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Attributes Selected</h2>
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                <th>0</th>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+                <th>Mean</th>
+                <th>Stdev</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>ID3</td>
+                <td>35</td>
+                <td>35</td>
+                <td>37</td>
+                <td>40</td>
+                <td>35</td>
+                <td>36.40</td>
+                <td>1.96</td>
+            </tr>
+            <tr>
+                <td>FSS-ID3</td>
+                <td>7</td>
+                <td>8</td>
+                <td>7</td>
+                <td>13</td>
+                <td>18</td>
+                <td>10.60</td>
+                <td>4.32</td>
+            </tr>
+            <tr>
+                <td>Jenesis</td>
+                <td>20</td>
+                <td>19</td>
+                <td>22</td>
+                <td>20</td>
+                <td>23</td>
+                <td>20.80</td>
+                <td>1.47</td>
+                </tbody>
+    </table>
+    </table>
+        </body>
+    </body>
+    <h4>REFERENCES</h4>
+        <p>Benjamin, D. P. (ed.) (1990). Change of representation and inductive bias. Norwell, MA:
+            Kluwer Academic Publishers.<br>Bogart, K. P. (1990). Introductory combinatorics, 2nd Ed. Orlando, FL: Harcourt.<br>Booker, L. B., Goldberg, D. E., & Holland, J. H. (1989). Classifier systems and genetic algorithms. Artificial Intelligence, 40, 235-282.<br>Box, G. E. P., Jenkins, G. M., & Reinsel, G. C. (1994). Time series analysis, forecasting, and control (3rd ed.).<br> San Francisco, CA: Holden-Day.<br>Breiman, L. (1996) Bagging predictors. Machine Learning, 24, 123-140.<br>Brooks, F. P. (1995). The mythical-man month, Anniversary edition: Essays on software engineering. Reading, MA: AddisonWesley.<br>Cantu-Paz, E. (1999). Designing efficient and accurate parallel genetic algorithms.Ph.D. thesis, University of Illinois at Urbana-Champaign. Technical report, Illinois Genetic Algorithms Laboratory (IlliGAL).<br>Cormen, T. H., Leiserson, C. E., Rivest, R. L., &Stern, C. (2001). Introduction to algorithms, 2nd edition. Cambridge, MA: MIT Press.<br>Cover, T. M. & Thomas, J. A. (1991). Elements of iInformation theory. New York: John Wiley & Sons.<br>DeJong, K. A., Spears, W. M., & Gordon, D. F. (1993). Using genetic algorithms for concept learning. Machine Learning, 13, 161-188.<br>Donoho, S. K. (1996). Knowledge-guided constructive induction. Ph.D. thesis,Department of Computer Science, University of Illinois at Urbana-Champaign. <br>Duda, R. O., Hart, P. E., & Stork, D. (2000). Pattern classification, 2nd ed. New York: John Wiley & Sons. <br>Engels, R., Verdenius, F., & Aha, D. (1998). Proceedings of the 1998 Joint AAAI-ICML Workshop on the Methodology of Applying Machine Learning (Technical Report WS-98-16). Menlo Park, CA: AAAI Press.<br>Freund, Y. & Schapire, R.E. (1996). Experiments with a new boosting Algorithm. In Proceedings of the 13th International Conference on Machine Learning, pp. 148-156. San Mateo, CA: Morgan Kaufmann.<br>Fu, L.-M. & Buchanan, B. G. (1985). Learning intermediate concepts in constructing a hierarchical knowledge base. In Proceedings of the International Joint Conference on Artificial Intelligence (IJCAI-85), pp. 659-666, Los Angeles, CA.<br>Gaba, D. M., Fish, K. J., & Howard, S. K.(1994). Crisis management in anesthesiology.New York: Churchill Livingstone.<br>Geman, S., Bienenstock, E., & Doursat, R. (1992). Neural networks and the bias/variance dilemna. Neural Computation, 4, 1-58.</p>
+</html>
+        
+        
+           
