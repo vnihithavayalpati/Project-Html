@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="main.css">
+        </head>
+        <body>
+          <p>Then the model (4) seeks to determine the relative efficiency of each bank.<br>It is clear from the model (4) that smaller value of * ho is preferred since we prefer larger values of yro and smaller values of xio . Therefore, model (4) tries to find a set of weights vi and ur so that the ratio of aggregated xio to aggregated yro reaches the minimum. Note that model (4) is solved for each bank.<br>Therefore, model (4) does not seek the average best performance, but the efficient or best performance achievable by a proper set of optimized weights.
+        <img src="2024-01-17.png">
+              
+                   <p>where (*) represents the optimal values in model (4). It can be seen that (5) is similar to the regression model with α* the intercept on the y-axis. The implicit difference between model (4) and the regression model lies in the fact that (i) model (4) deals with more than one dependent variables ( yrj ) at the same time, and (ii) equation (5) is obtained for each bank with a score of one. Further, (5) represents the efficient frontier. Since different units with score of one in model (4) may not be on the same frontier, the resulting efficient frontier is a piecewise linear one, as shown in Figure 1.</p>
+            <h>Note that when * ho = 1, we have</h>
+            
+            <img src="2024-01-17%20(2).png">
+            
+            <p>From the above discussion, we can see that DEA can be an excellent data-mining approach with respect to extracting efficiency information from the performance data. Consider three two-stage bank operations as presented in Table 1,<br> where the first stage has two inputs (IT investment and labor) and one output (deposit), and the second stage has one input (deposit generated from the first stage) and one output (profit) (see, e.g., Figure 2).</p>
+            
+            <h2>Table 1: Numerical example</h2>
+            <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            
+            <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: center;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        h2 {
+            text-align: center;
+        }
+             caption {
+            font-weight: bold;
+            caption-side: top;
+        }   
+    </style>
+            <table>
+        <thead>
+            <tr>
+                <caption>Stage 1  Stage 2 Efficency</caption>
+                <th>Bank</th>
+                <th>IT Investment</th>
+                <th>Labor</th>
+                <th>Deposit</th>
+                <th>Profit</th>
+                <th>Stage 1</th>
+                <th>Stage 2</th>
+                <th>Overall</th>
+            </tr>
+                </thead>
+        <tbody>
+            <tr>
+                <td>A</td>
+                <td>7</td>
+                <td>9</td>
+                <td>4</td>
+                <td>16</td>
+                <td>1</td>
+                <td>0.75</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>B</td>
+                <td>9</td>
+                <td>4</td>
+                <td>6</td>
+                <td>14</td>
+                <td>1</td>
+                <td>0.5</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>C</td>
+                <td>11</td>
+                <td>6</td>
+                <td>3</td>
+                <td>23</td>
+                <td>0.791</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+        </tbody>
+    </table>
+            <p>Applying model (2) to the two stages indicates that the banks A and B in the first stage, and bank C in the second stage are efficient. Now, if we ignore the intermediate measure of deposit and apply model (2), the last column of Table 1 indicates that all banks are efficient.<br>This simple numerical example indicates that the conventional DEA fails to correctly characterize the performance of two-stage operations, since an overall DEA efficient performance does not necessarily indicate efficient performance in individual component. Consequently, improvement to the best practice can be distorted, i.e., the performance improvement of one stage affects the efficiency status of the other because of the presence of intermediate measures. In the next section, we present a DEA model that can directly evaluate the performance of two-stage operations, and set performance targets for intermediate measures.</p>
+
+            <h2>THE MODEL</h2>
+            <p>Consider the indirect impact of IT on banking performance where IT directly impacts certain intermediate measures which in turn are transformed to realize banking performance. Figure 2 describes the indirect impact of IT on banking performance where the first stage use inputs xi (i =1, …, m) to produce outputs zd ( d = 1, …, D), and then these zd are used as inputs in the second stage to produce outputs yr (r = 1, …, s). It can be seen that zd (intermediate measures) are outputs in stage 1 and inputs in stage 2. The first stage is viewed as an IT-related, value-added activity where deposit is generated and then used as the input to the second stage where revenue is generated.</p>
+            
+            <h3>Figure 2: IT impact on banking performance.</h3>
+            
+            <img src="2024-01-17%20(3).png">
+            
+            <img src="2024-01-17%20(5).png">
+            
+            <img src="2024-01-17%20(4).png">
+            <P>where w1 and w2 are user-specified weights reflecting the preference over the two stages’ performance, and symbol “~” represents unknown decision variables.</P>
+            
+            <p>The rationale of model (6) is as follows: (i) when we evaluate the impact of IT investment on the intermediate measures, we want to minimize the input usage given the intermediate measures. For example, given the deposits generated, our objective is to examine whether a bank can reduce its input consumption (including IT investment) compared to the best practice, and (ii) when we evaluate bank performance as a result of the intermediate measures, we want to maximize the performance given the intermediate measures. For example, given the deposits it generated, our objective is to examine whether a bank can increase its profit. Model (6) characterizes the indirect impact of IT on banking performance in a single linear programming problem.</p>
+            
+            <img src="2024-01-17%20(6).png">
+            
+            <img src="2024-01-17%20(8).png">
+            
+            <img src="2024-01-17%20(9).png">
+            
+            <style>
+        h4 {
+            text-align: center;
+        }
+    </style>
+            
+            <h2><b>APPLICATION</b></h2>
+            
+            <P>Consider a set of 15 banks obtained from the Functional Cost and Profit Analysis data set collected by the Federal Reserve Bank under its Functional Cost Analysis (FCA) program. The data for this study is based on the FCA Plus data set from 1997. Table 2 presents the data. In the first stage, we have three inputs: Transactional IT investment, Strategic IT investment, and Labor expenses, and two outputs: number of Accounts and number of Transactions. In the second stage, we have two outputs: Revenue and Equity.</P>
+            
+            <P>The IT investment measures are constructed using data from the following FCA defined expense categories: Vendor Data Processing (all expenses for data processing performed by outside banks, e.g., check processing centers); Telephone and Electronic Access (total expense for communications, including fees for telephone lines, online charges, software installation, and modification); Network Expense Fees (ATM) (all membership and participation fees charged by ATM networks); EFT/ACH Cost Center expense (all expenses related to electronic banking delivery systems other than ATMs; ATM Cost Center expenses (all expenses related to maintenance and support of all ATM transactions on ATMs either owned or leased by the bank); Proof & Transit Cost Center expense (all expenses related to check processing, such as encoding, check sorting, and generating account balances); and Data Processing Cost Center expense (all expenses related to internal data processing, i.e., services provided by the bank’s own data processing staff, maintenance and support of institution’s software, operating systems, PCs, mainframes, etc.).</P>
+            
+            <h2>Table 2: Data for 15 banks</h2>
+            <table>
+                <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        table {
+            width: 70%;
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: center;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        h2 {
+            text-align: center;
+        }
+    </style>
+        <thead>
+            <tr>
+                <th>Bank</th>
+                <th>Tran</th>
+                <th>IT Strategic</th>
+                <th>IT Labor</th>
+                <th>Accounts</th>
+                <th>Transactions</th>
+                <th>Revenue</th>
+                <th>Equity</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>68,374,883</td>
+                <td>27,207,296</td>
+                <td>96,644,431</td>
+                <td>28,430.63</td>
+                <td>109,486,141</td>
+                <td>4,561,844,525</td>
+                <td>507,245,000</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>43,674,296</td>
+                <td>20,728,716</td>
+                <td>82,211,383</td>
+                <td>4,020.105</td>
+                <td>149,772,606</td>
+                <td>819,640,950</td>
+                <td>1,697,263,000</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>36,240,480</td>
+                <td>22,876,333</td>
+                <td>41,677,506</td>
+                <td>1,417,653</td>
+                <td>42,281,949</td>
+                <td>705,076,794</td>
+                <td>740,666,344</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>10,974,089</td>
+                <td>3,604,030</td>
+                <td>23,386,094</td>
+                <td>4,801.735</td>
+                <td>41,624,391</td>
+                <td>252,167,755</td>
+                <td>250,842,739</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>8,165,838</td>
+                <td>4,598,047</td>
+                <td>11,074,813</td>
+                <td>5,777.526</td>
+                <td>14,023,708</td>
+                <td>137,014,849</td>
+                <td>120,597,000</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>5,826,344</td>
+                <td>1,383,431</td>
+                <td>10,723,845</td>
+                <td>9,335</td>
+                <td>1,982,414</td>
+                <td>160,695,007</td>
+                <td>218,540,000</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>3,039,890</td>
+                <td>2,701,362</td>
+                <td>17,225,000</td>
+                <td>16,539.81</td>
+                <td>45,748,993</td>
+                <td>353,726,000</td>
+                <td>451,221,000</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>2,631,636</td>
+                <td>891,139.9</td>
+                <td>7,585,518</td>
+                <td>4,245.225</td>
+                <td>10,054,751</td>
+                <td>50,543,312</td>
+                <td>81,451,129</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>2,445,674</td>
+                <td>531,648.3</td>
+                <td>7,537,537</td>
+                <td>1,668.805</td>
+                <td>8,294,216</td>
+                <td>59,544,335</td>
+                <td>55,444,711</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>1,481,997</td>
+                <td>459,703.1</td>
+                <td>370,169</td>
+                <td>3,801</td>
+                <td>433,717</td>
+                <td>28,100,210</td>
+                <td>23,699,857</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>1,471,033</td>
+                <td>1,070,595</td>
+                <td>6,378,768</td>
+                <td>2,230.61</td>
+                <td>5,915,536</td>
+                <td>70,210,212</td>
+                <td>65,192,518</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>1,321,121</td>
+                <td>863,879.5</td>
+                <td>3,718,510</td>
+                <td>16,935.8</td>
+                <td>7,093,301</td>
+                <td>37,509,806</td>
+                <td>37,123,155</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>1,287,557</td>
+                <td>687,890.1</td>
+                <td>5,609,930</td>
+                <td>3,121.808</td>
+                <td>6,223,975</td>
+                <td>41,187,111</td>
+                <td>36,704,000</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>1,164,952</td>
+                <td>762,892.3</td>
+                <td>3,449,934</td>
+                <td>3,822.564</td>
+                <td>4,476,600</td>
+                <td>28,526,966</td>
+                <td>25,739,404</td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td>1,121,468</td>
+                <td>391,687.7</td>
+                <td>3,185,637</td>
+                <td>4,939.944</td>
+                <td>8,530,050</td>
+                <td>41,220,844</td>
+                <td>43,067,174</td>
+            </tr>
+        </tbody>
+    </table>
+            <p>Transactional IT refers to IT investment aimed at automation of routine and repetitive tasks to reduce processing costs. Thus, the Transactional IT measure is constructed by adding the total expenses for Vendor Data Processing, the Proof & Transit Cost Center, and the Data Processing Cost Center. On the other hand, Strategic IT refers to IT investment aimed at increasing market share or generating revenues. Thus, the Strategic IT measure is constructed by adding all expenses related to Electronic Access and Automation of customer interface, total expenses for Telephone and Electronic Access, ATM Network Fees, the EFT/ACH Cost Center, and the ATM Cost Center. The labor input is the sum of the salary plus benefits costs of full-time equivalent personnel.</p>
+            
+    </body>
+</html>
